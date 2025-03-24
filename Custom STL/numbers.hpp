@@ -1,0 +1,15 @@
+#pragma once
+
+#include "concepts.hpp"
+
+namespace asv
+{
+	namespace numbers
+	{
+		template <typename numType> requires floating_point<numType>
+		inline constexpr numType pi = static_cast<numType>(3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982148086513282306647093844609550582);
+
+		template <typename numType> requires floating_point<numType>
+		inline constexpr numType e = static_cast<numType>(2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821785251664274274663919320030599218174135966290435);
+	}
+}
